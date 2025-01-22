@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grafika ze specjalizacjami</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Niebieskie koło -->
+    <div class="circle">
+        <img src="./1.png" alt="pis zdjęcia">
+    </div>
+    
+    
+    <!-- Pół obwodu przerywanego -->
+    <div class="dashed-semicircle"></div>
+
+    <!-- Specjalizacje -->
+    <div class="specialization">
+        <div class="box" id="box1">
+          Lokalizacja w Czasie Rzeczywistym- RTLS 1
+          <div class="description">
+            Precyzyjne śledzenie obiektów, przedmiotów i osób. Pomagamy w lepszym zarządzaniu przestrzenia i zasobami.
+          </div>
+        </div>
+        
+        <div class="box" id="box2">
+          Sieci MESH
+          <div class="description">
+            Stabilność połączenia nawet w ekstremalnych dla sieci radiowych warunkach. Projektujemy oraz wdrażamy sieci MESH będące podstawą bezpiecznego internetu rzeczy.
+          </div>
+        </div>
+        
+        <div class="box" id="box3">
+          Bezprzewodowa Sensoryka
+          <div class="description">
+            Monitorowanie obiektów tam gdzie wcześniej było to niemożliwe lub nieopłacalne. Dostarczamy rozwiązania z precyzyjnego mierzenie kluczowych parametrów.
+          </div>
+        </div>
+        
+        <div class="box" id="box4">
+          Bezprzewodowa komunikacja
+          <div class="description">
+            Bezpieczna i szybka łączność- nawet na kilometry zasięgu. Tworzymy komunikację w oparciu o sieci GSM oraz UHF tam gdzie tradycyjna sieć przewodowa zawodzi. 
+          </div>
+        </div>
+      </div>
+      
+    <!-- Linie łączące -->
+    <svg class="lines" width="100%" height="100%">
+      <line id="line1" class="line" />
+      <line id="line2" class="line" />
+      <line id="line3" class="line" />
+      <line id="line4" class="line" />
+    </svg>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

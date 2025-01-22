@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+}
+
+.timeline {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px auto;
+max-width: 600px;
+}
+
+.step {
+display: flex;
+align-items: center;
+justify-content: flex-start;
+margin: 20px 0;
+width: 100%;
+}
+
+.step:nth-child(even) {
+flex-direction: row-reverse;
+}
+
+.icon-container {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 60px;
+height: 60px;
+border-radius: 50%;
+background-color: #fff;
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+margin: 0 20px;
+}
+
+.content {
+background-color: #007bff;
+padding: 20px;
+border-radius: 10px;
+color: #fff;
+position: relative;
+width: 250px;
+}
+
+.content::before {
+content: '';
+position: absolute;
+top: 50%;
+transform: translateY(-50%);
+width: 15px;
+height: 15px;
+background-color: #007bff;
+border-radius: 50%;
+box-shadow: 0 0 0 3px #fff;
+}
+
+.step:nth-child(odd) .content::before {
+left: -10px;
+}
+
+.step:nth-child(even) .content::before {
+right: -10px;
+}
+
+.step-title {
+font-size: 18px;
+margin-bottom: 5px;
+}
+
+.step-desc {
+font-size: 14px;
+line-height: 1.6;
+}
+
+.step-number {
+font-size: 24px;
+color: #007bff;
+margin-top: 10px;
+}

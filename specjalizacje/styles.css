@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px;
+  display: flex; /* Używamy flexboxa do wyrównania */
+  justify-content: center; /* Wyrównujemy elementy w poziomie */
+  align-items: center; /*8Wyrównujemy elementy w pionie */
+}
+.circle {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 200px; /* Dopasuj w zależności od rozmiaru zdjęcia */
+  height: 200px;  /* Dopasuj w zależności od rozmiaru zdjęcia */
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  overflow: hidden; /* Zapewnia, że zdjęcie nie wyjdzie poza kształt koła */
+}
+
+.circle img {
+  width: 100%;   /* Dopasowuje zdjęcie do rozmiaru kontenera */
+  height: 100%;  /* Dopasowuje zdjęcie do rozmiaru kontenera */
+  object-fit: cover; /* Zapewnia, że zdjęcie wypełni cały kontener, zachowując proporcje */
+}
+
+
+.dashed-semicircle {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  width: 200px;
+  height: 200px;
+  border: 4px dashed #0056a8;
+  border-style: dotted;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 100% 100%, 50% 100%);
+}
+
+
+
+.specialization {
+  margin-left: 50%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 20px; /* Odstępy między boxami */
+  margin-right: 10%;
+}
+
+.box {
+  position: relative;
+  background-color: #0056a8;
+  color: white;
+  padding: 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  width: 500px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden; /* Zapewnia brak wycieku tekstu */
+  font-size: large;
+}
+
+.box .description {
+  max-height: 0; /* Początkowo ukryte */
+  overflow: hidden; /* Ukrywanie zawartości */
+  transition: max-height 0.5s ease, margin-top 0.5s ease;
+  background-color: rgba(0, 86, 168, 0.9);
+  color: white;
+  padding: 0 10px; /* Dopasowanie paddingu */
+  border-radius: 0 0 10px 10px;
+  font-size: medium;
+
+}
+
+.box.active .description {
+  max-height: 200px; /* Ustaw maksymalną wysokość, dopasowaną do opisu */
+  margin-top: 10px; /* Odstęp między boxem a opisem */
+}
+
+
+
+.lines {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* Linie nie będą przeszkadzać w interakcji z innymi elementami */
+}
+
+.line {
+  stroke: rgb(68, 68, 68);
+  stroke-width: 1;
+  fill: none; /* Linie nie będą wypełnione */
+}
